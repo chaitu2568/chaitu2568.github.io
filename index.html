@@ -1,231 +1,917 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Ocat</title>
-  <meta name="description" content="simple CV example created with HTML and CSS">
-  <meta name="author" content="Fly Nerd">
-  <link rel="icon" href="./img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Chaitanya Bogavalli | Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer at SAP Concur specializing in AI-augmented engineering, distributed systems, and cloud-native architecture">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <div>
-      <img src="./img/chaitu.jpeg" />
-    </div>
-    <h1>Krishna Chaitanya Bogavalli</h1>
-    <section>
-      <p>Hello! I'm Krishna Chaitanya Bogavalli, Computer Science Graduate Student at Arizona State University. I have passion for learning new technologies and building a scalable web applications using them. I'm focused, dedicated, hard-working and willing to learn in a changing and challenging environment.</p>
-      <a href="https://www.facebook.com/chaitanya.bogavalli" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.twitter.com/" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://github.com/chaitu2568/" target="_blank">
-        <i class="fab fa-github-alt"></i>
-      </a>
-      <a href="https://www.instagram.com/chaitanya_bogavalli/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/krishna-chaitanya-bogavalli-b3067189/" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </section>
-  </header>
-  <main>
-    <section>
-        <h3>Professional Experience</h3>
-        <article>
-          <div class='job-title'>
-            <span>01.2020 - Present</span> <strong>Arizona State University</strong><br> <strong>Position:</strong> Software Developer - Parttime
-          </div>
-          <div>
-            <p><strong>Tech stack:</strong>JavaScript(ES6) / ReactJS / Drupal 8</p>
-            <ul class="job-description">
-              <li>Key Responsibilities include designing and developing dynamic web pages for different communities with in CGEST using JavaScript ES6 and React. Designed new API end points using NodeJS and Express to integrate different micro-services into application such as authentication, fetching data and file uploads.
-                </li>
-              <li>Developed interactive dashboards to provide concise visual representations of data in web application using D3.js and Tableau.</li>
-              <li>Implemented scripts to automate the default storage location of application to AWS S3</li>
-            </ul>
-          </div>
-        </article>
-        <article>
-            <div class='job-title'>
-              <span>05.2018 - 12.2018</span> <strong>Nipun Net Solutions PVT LTD</strong><br> <strong>Position:</strong> Software Engineer
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div>
-              <p><strong>Tech stack:</strong>JavaScript ES6 / ReactJS / Java / MySQL / SpringMVC</p>
-              <ul class="job-description">
-                <li>Developed application front-end using ReactJS and implemented rich functionalities like CRUD operations, form validations, paginations, and search in multiple pages.</li>
-                <li>Created web-based interactive dashboards using HighCharts and integrated Google Maps API and React Big Calendar to the application.</li>
-                <li>Implemented Multiple Services for different components to connect the application with back-end REST services which are developed using SpringMVC.</li>
-              </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2.5zM10 15.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V16a.75.75 0 01.75-.75zM3.75 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5H3a.75.75 0 01.75.75zM17.25 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM5.99 4.93a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06L5.99 5.99a.75.75 0 010-1.06zM13.01 12.95a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zM5.99 15.07a.75.75 0 010-1.06l1.06-1.06a.75.75 0 111.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0zM13.01 7.05a.75.75 0 010-1.06l1.06-1.06a.75.75 0 111.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0z"/>
+                    <path d="M10 13a3 3 0 100-6 3 3 0 000 6z"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                </svg>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Krishna Chaitanya Bogavalli</h1>
+                <div class="hero-title">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Building AI-first production systems in a highly regulated domain.
+                    Specializing in distributed systems, cloud-native architecture, and agentic workflows.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/chaitu2568" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/krishna-bogavalli-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:kbogaval@asu.edu" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-          </article>
-          <article>
-            <div class='job-title'>
-              <span>05.2017 - 08.2017</span> <strong>Nipun Net Solutions PVT LTD</strong><br> <strong>Position:</strong> Software Engineer Intern
-            </div>
-            <div>
-              <p><strong>Tech stack:</strong>Python / Flask / Django REST Framework, JavaScript(jQuery)</p>
-              <ul class="job-description">
-                <li>Developed an integration framework that affixes the material management module to all company-owned applications using Python-Flask.</li>
-                  <li>Integrated the application with Google Firebase for Handling seamless user authentication.</li>
-                  <li>Handles Browser Requests and prevent abuse in REST APIs with JWT backlisting.</li>
-                  <li>Improved Discussion Portal (Chat Messenger) of a web application by using Web Sockets via Django Channels help to provide faster and asynchronous communication between users.</li>
-              </ul>
-            </div>
-          </article>
-      </section>
-      
-    <section>
-      <h3>Software Projects</h3>
-      <article class='course'>
-        <div class='title'>
-          <h4>AWS Object Detection as a Service</h4>
         </div>
-        <div class="descrition">
-          <p>Web application to perform distributed and efficient object detection in Edge Computing with deep learning AMI provided by AWS. Implemented a custom designed load balancer to ensure elasticity to our application by automatically scaling in and out on demand. Used AWS SQS for asynchronous communication between different EC2 instances. Technologies: Python, AWS EC2 (Elastic Cloud Compute), S3 (Simple Storage Service), SQS (Simple Queue Service), Raspberry Pi.</p>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-      </article>
-      <article class='course'>
-        <div class='title'>
-          <h4>GCP Cloud Application For Study Group Finder</h4>
-        </div>
-        <div class="descrition">
-          <p>Designed a full stack web application using Django REST Framework which helps students to create virtual study rooms. It facilitates Chat Sessions, Discussion Forums, login and register functionality using Google Firebase. Deployed the application in Google App Engine, automated the back-end media storage to Google Cloud and Cloud SQL for database. Technologies: Python, Django, jQuery, GAE (Google App Engine), CloudSQL, Cloud Storage, Firebase.</p>
-      </article>
-      <article class='course'>
-        <div class='title'>
-          <h4>Ecommerce Web Application</h4>
-        </div>
-        <div class="descrition">
-          <p>Designed Online Shopping website which include functionalities like Internal search engine, guest user access, shopping cart, email integration for notifications, custom analytics, billing and payment interface. Technologies used: Python, JavaScript, JQuery, Django.</p>
-      </article>
-      <article class='course'>
-        <div class='title'>
-          <h4>Social Media Blog Management System</h4>
-        </div>
-        <div class="descrition">
-          <p>Developed a MEAN stack web application which facilitate users to create, update, delete and retrieve the social media posts. Used angular routing mechanisms to switch between different components with in the application. Serve the client-side developed in angular with data stored in MongoDB database through Node and Express backend. Technologies: Angular, Node, Express, MongoDB.</p>
-        </div>
-      </article>
-      <article class='course'>
-        <div class='title'>
-          <h4>Gesture Recognition Service For Classifying American Sign Language</h4>
-        </div>
-        <div class="descrition">
-          <p>Developed Android Mobile application hosted in AWS which shows gesture video from which user can learn the gesture, replicate a learned one and uploads it to the Fog Server. Integrated the application with online Restful service which captures Human key points of a sign videos and return the label of the gesture. Technologies. Technologies: Android, Java, Python, Flask, Apache HTTP Server, AWS EC2.</p>
-        </div>
-      </article>
-      <article class='course'>
-        <div class='title'>
-          <h4>Home Automation System</h4>
-        </div>
-        <div class="descrition">
-          <p>Developed IOT based Home Automation System which works on both Mobile phones and Web browsers using which users control the appliances. Trained Machine Learning Classifiers Naïve Bayes, Logistic Regression and Decision Tree on real-time data which toggles output (ON/OFF) based on information collected from Sensors. Technologies: Android, JAVA, PHP, PostgreSQL, jQuery, Python, Scikit-learn.</p>
-        </div>
-      </article>
-    </section>
-    <section>
-        <h3>Data Science Projects</h3>
-        <article class='course'>
-            <div class='title'>
-              <h4>Intent Classification and Out-of-Scope Prediction</h4>
-            </div>
-            <div class="descrition">
-              <ol><li>Developed task-oriented Dialog System for Chatbots. Performed Classification and Out-of-Scope Prediction of different queries
-                used to train bots and dialog-oriented Systems.</li>
-                <li>Evaluated the Performance of various standard classifiers such as BERT, DialogFlow, MLP, CNN, SVM and Bi-directional GRU
-                by extracting word Embeddings given by ELMo, GloVe and USE.</li></ol>
-          </article>
-        <article class='course'>
-            <div class='title'>
-              <h4>Personality Classification Using Social Media</h4>
-            </div>
-            <div class="descrition">
-              <p>Utilizing the information of the Facebook pages liked by Users, this project predicts the scores of different personality traits of all
-                the users using Machine Learning Regression Models and dimensionality reduction techniques like PCA and LDA. Technologies used: Python and R.
-            </p>
-            </div>
-          </article>
-        <article class='course'>
-            <div class='title'>
-              <h4>Walmart Sales Prediction using Time-Series Algorithms and Hybrid Models</h4>
-            </div>
-            <div class="descrition">
-              <p>Implemented different Time-series Forecasting Algorithms and Hybrid Models to predict and analyze future Sales of Walmart stores
-                in case of Non-Linear or irregular trends.</p>
-          </article>    
-    </section>
-    <section>
-      <h3>Technical Skills</h3>
-      <div class='skills'>
-        <div class='column'>
-          <h4>Backend Programming</h4>
-          <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class='column'>
-          <h4>Frontend Programming</h4>
-          <ul>
-            <li>JavaScript(ES6),ReactJS,JQuery, </li>
-            <li>HTML,CSS</li>
-          </ul>
-        </div>
-        <div class='column'>
-            <h4>Frameworks</h4>
-            <ul>
-              <li>Django</li>
-              <li>Flask</li>
-              <li>Node and Express</li>
-            </ul>
-          </div>
-        <div class='column'>
-            <h4>Databases & Cloud Technologies</h4>
-            <ul>
-              <li>Relational: MySQL, PostgreSQL, NoSQL: MongoDB, Redis</li>
-              <li>Heroku, Amazon Web Services (EC2, S3, Lambda, SQS), GCP (Firebase, CloudSQL, GAE)</li>
-            </ul>
-          </div>
-        <div>
-          <h4>Languages</h4>
-          <p>🇵🇱 Telugu - Native speaker</p>
-          <p>🇬🇧 English - Proficient</p>
-        </div>
-      </div>
     </section>
 
-    <section>
-      <h3>Education</h3>
-      <article>
-        <div class='school'>
-          <span>2019-2020</span> <strong>Arizona State University</strong>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        Senior Software Engineer at SAP Concur, currently all in on AI-augmented engineering —
+                        designing and building internal MCP tooling, multi-agent workflows, and a growing library
+                        of AI skills that a small team now relies on to ship, monitor, and maintain a highly
+                        regulated business travel platform at pace.
+                    </p>
+                    <p>
+                        Over 4+ years at SAP Concur, I've grown from building cloud-native microservices during
+                        a multi-year monolith-to-microservice re-platforming, to owning design decisions and
+                        latency-critical optimizations across mission-critical distributed systems serving corporate
+                        travelers worldwide.
+                    </p>
+                    <p>
+                        I'm most drawn to problems where production software engineering meets applied AI — where
+                        the right infrastructure, thoughtful design, and safe agentic workflows unlock outcomes
+                        small teams couldn't reach otherwise.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">AI Skills Built</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">% Cloud Native</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/chaitu.jpeg" alt="Krishna Chaitanya Bogavalli" style="width: 100%; max-width: 400px; border-radius: 24px; box-shadow: var(--shadow-xl);">
+                </div>
+            </div>
         </div>
-        <div class="descrition">
-          Master of Computer Science
-        </div>
-      </article>
-      <article>
-        <div class='school'>
-          <span>2014-2018</span> <strong>Jawaharlal Nehru Technological University - Kakinada</strong>
-        </div>
-        <div>
-          Bachelor of Technology in Computer Science 
-        </div>
-      </article>
     </section>
-  </main>
-  <footer>
-    <p>Created by: <a href="https://www.linkedin.com/in/krishna-chaitanya-bogavalli-b3067189/">@kbogaval</a>  / <a href="https://www.facebook.com/chaitanya.bogavalli">Facebook</a> / 2020 </p>
-  </footer>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline">
+                <!-- Senior Software Engineer -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <p class="company">SAP Concur • Full-time • Allen, TX</p>
+                            </div>
+                            <span class="timeline-date">Apr 2026 – Present</span>
+                        </div>
+                        <p class="timeline-description">
+                            Full pivot to AI-augmented engineering — building internal MCP tooling, agentic workflows,
+                            and AI skill libraries the team depends on to ship, monitor, and maintain production systems at pace.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Originated and built an internal MCP server automating production health reviews — correlating Dynatrace metrics, Kibana logs, PagerDuty incidents, and K8s telemetry, cutting on-call review time from hours to minutes</li>
+                            <li>Authored TypeScript multi-agent system on LangGraph.js with StateGraph-driven supervisor orchestrating collector, triage, and report-writer agents with P1/P2/P3 fingerprint-based triage</li>
+                            <li>Authored 25+ reusable AI skills for escalation triage, log search, incident investigation, PR review, vulnerability tracking, and deployment inspection</li>
+                            <li>Delivered complete partner-API migration via Claude-based agentic workflows with human-in-the-loop review</li>
+                            <li>Continue architecture leadership on service boundaries, Redis caching, reactive orchestration, and reliability patterns</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Claude AI</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">LangGraph.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Development Engineer 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Development Engineer 3</h3>
+                                <p class="company">SAP Concur • Full-time • Allen, TX</p>
+                            </div>
+                            <span class="timeline-date">Apr 2024 – Mar 2026</span>
+                        </div>
+                        <p class="timeline-description">
+                            Stepped into design ownership — architecting key capabilities of the business travel product
+                            and optimizing latency-critical paths across distributed systems.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Developed and delivered Kotlin/Ktor rules-evaluation service on Drools powering one of the key capabilities of the business travel product</li>
+                            <li>Built Spring WebFlux reactive orchestration microservices with Flux/Mono, non-blocking WebClient, backpressure handling, timeout and retry strategies</li>
+                            <li>Integrated Java virtual threads (Project Loom) cutting latency on hot paths</li>
+                            <li>Designed Redis-backed caching layer de-duplicating upstream requests across regions</li>
+                            <li>Led integrations with multiple major external content providers — schema modeling, request/response orchestration, per-provider error isolation</li>
+                            <li>Built JMeter load/stress-test harness and infra-monitoring dashboards covering pod count, CPU/memory, HPA/autoscaling</li>
+                            <li>Mentored engineers on reactive Kotlin, JVM concurrency, and API design</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Ktor</span>
+                            <span class="tech-tag">Spring WebFlux</span>
+                            <span class="tech-tag">Drools</span>
+                            <span class="tech-tag">Virtual Threads</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Dynatrace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Development Engineer 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Development Engineer 2</h3>
+                                <p class="company">SAP Concur • Full-time • Allen, TX</p>
+                            </div>
+                            <span class="timeline-date">Dec 2021 – Mar 2024</span>
+                        </div>
+                        <p class="timeline-description">
+                            Builder phase — architected and delivered Go microservices from scratch, replacing legacy monolith
+                            components with cloud-native distributed systems.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Built cloud-native Go microservices (Gin framework) from the ground up as part of multi-year monolith re-platforming</li>
+                            <li>Architected partner-integration adapter layer normalizing external provider APIs for consistency</li>
+                            <li>Leveraged Go concurrency primitives (goroutines, channels, context) for high-throughput request handling</li>
+                            <li>Deployed on AWS EKS with Helm, Envoy sidecars, Vault-agent for secrets, across US/EU/APJ regions</li>
+                            <li>Built CI/CD pipelines and integrated OpenTelemetry, New Relic, Dynatrace, ELK for observability</li>
+                            <li>Implemented TDD with Godog BDD and Newman-in-Lambda scheduled sanity testing framework</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Gin</span>
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Lambda</span>
+                            <span class="tech-tag">Helm</span>
+                            <span class="tech-tag">Envoy</span>
+                            <span class="tech-tag">OpenTelemetry</span>
+                            <span class="tech-tag">Vault</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Engineer II - Microchip -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Engineer II</h3>
+                                <p class="company">Microchip Technology Inc • Full-time • Chandler, AZ</p>
+                            </div>
+                            <span class="timeline-date">Feb 2021 – Dec 2021</span>
+                        </div>
+                        <p class="timeline-description">
+                            Streamlined credit card order processing and EDI integration for e-commerce platform
+                            serving enterprise customers.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Orchestrated API implementation to streamline credit card orders, facilitating seamless interactions between multiple systems</li>
+                            <li>Transformed EDI data pipeline by introducing staging database and self-service portal with ASP.NET MVC</li>
+                            <li>Developed robust tool for handling massive price updates for open-backlog sales orders, processing millions of records in single batch</li>
+                            <li>Utilized Tableau to generate key performance indicators (KPIs) for monitoring CRON jobs and database design optimization</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ASP.NET MVC</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">EDI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Software Engineer - Nipun -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Software Engineer</h3>
+                                <p class="company">Nipun Net Solutions • Full-time • India</p>
+                            </div>
+                            <span class="timeline-date">May 2018 – Dec 2018</span>
+                        </div>
+                        <p class="timeline-description">
+                            Built real-time inventory tracking dashboards and improved application performance
+                            through cloud infrastructure optimization.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Upgraded UI from jQuery to React achieving 30% performance improvement</li>
+                            <li>Built real-time inventory tracking dashboards with live data updates</li>
+                            <li>Improved application availability from 2 to 5 nines via database replication and CloudWatch monitoring</li>
+                            <li>Implemented auto-scaling with AWS load balancers for high-traffic periods</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- MCP Health Checker -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Internal Tool</span>
+                    </div>
+                    <h3>NDC-Hub Health Checker MCP</h3>
+                    <p class="project-description">
+                        Production health monitoring system automating service reviews across multiple environments.
+                        Multi-agent TypeScript system with LangGraph.js orchestrating parallel telemetry collection,
+                        intelligent triage, and automated report generation.
+                    </p>
+                    <ul class="project-features">
+                        <li>Correlates Dynatrace metrics, Kibana logs, PagerDuty incidents, K8s telemetry</li>
+                        <li>StateGraph supervisor with collector/triage/report-writer agents</li>
+                        <li>Fingerprint-based P1/P2/P3 triage with anti-hallucination guardrails</li>
+                        <li>Cut on-call review time from hours to minutes</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>LangGraph.js</span>
+                        <span>Claude API</span>
+                        <span>MCP</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Private Repo
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Interview Prep Dashboard -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Open Source</span>
+                    </div>
+                    <h3>SDE Interview Prep Tracker</h3>
+                    <p class="project-description">
+                        12-week structured interview preparation dashboard with progress tracking for 130 LeetCode
+                        problems across 16 patterns. GitHub-integrated progress sync and confidence tracking.
+                    </p>
+                    <ul class="project-features">
+                        <li>Interactive weekly timeline with pattern-based organization</li>
+                        <li>GitHub-synced progress tracking via GitHub Actions</li>
+                        <li>Confidence rating system and heatmap visualization</li>
+                        <li>System design study notes and behavioral prep</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>GitHub Pages</span>
+                        <span>GitHub API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chaitu2568/sde-interview-prep" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://chaitu2568.github.io/sde-interview-prep/" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- OwnWallet -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Private</span>
+                    </div>
+                    <h3>OwnWallet Finance PWA</h3>
+                    <p class="project-description">
+                        Self-hosted personal finance platform with end-to-end encryption. Built as a Progressive Web App
+                        with FastAPI backend and React frontend, deployed on AWS with Tailscale-only access.
+                    </p>
+                    <ul class="project-features">
+                        <li>Multi-account transaction tracking with category management</li>
+                        <li>Budget planning with alert system and goal tracking</li>
+                        <li>PostgreSQL with pgcrypto for field-level encryption</li>
+                        <li>Offline-first PWA with service worker caching</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>React</span>
+                        <span>PostgreSQL</span>
+                        <span>AWS EC2</span>
+                        <span>Tailscale</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 11H5v2h14v-2zm0-7H5v2h14V4zm0 14H5v2h14v-2z"/>
+                            </svg>
+                            Private Project
+                        </span>
+                    </div>
+                </div>
+
+                <!-- JobPilot -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">In Development</span>
+                    </div>
+                    <h3>JobPilot Career Platform</h3>
+                    <p class="project-description">
+                        Personal job search management platform forked from career-ops. Multi-profile support with
+                        application tracking, document management, and interview preparation tools.
+                    </p>
+                    <ul class="project-features">
+                        <li>Application lifecycle tracking with status updates</li>
+                        <li>Multi-profile support (admin/user roles)</li>
+                        <li>Document upload and management system</li>
+                        <li>Interview scheduling and preparation notes</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>React</span>
+                        <span>SQLite</span>
+                        <span>Vite</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://gitlab.com/chaitu2568/jobpilot" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
+                            </svg>
+                            GitLab
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Academic</span>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Full-stack e-commerce web application with product catalog, shopping cart, user authentication,
+                        and payment integration. Built as part of graduate coursework.
+                    </p>
+                    <ul class="project-features">
+                        <li>Product search and filtering with real-time updates</li>
+                        <li>User authentication and profile management</li>
+                        <li>Shopping cart with session persistence</li>
+                        <li>Admin dashboard for inventory management</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>PostgreSQL</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chaitu2568/ECOMMERCE-PROJECT" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Deep Learning Projects -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">ML/AI</span>
+                    </div>
+                    <h3>Machine Learning Portfolio</h3>
+                    <p class="project-description">
+                        Collection of ML/DL projects including computer vision, NLP, and data mining experiments.
+                        Implementations of various algorithms and neural network architectures.
+                    </p>
+                    <ul class="project-features">
+                        <li>Convolutional neural networks for image classification</li>
+                        <li>Data mining algorithms and exploratory analysis</li>
+                        <li>Python-based automation scripts and tools</li>
+                        <li>Jupyter notebooks with detailed explanations</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Jupyter</span>
+                        <span>NumPy</span>
+                        <span>Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chaitu2568?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AWS Object Detection -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Cloud + AI</span>
+                    </div>
+                    <h3>AWS Object Detection as a Service</h3>
+                    <p class="project-description">
+                        Distributed edge computing application for efficient object detection using AWS deep learning AMI.
+                        Custom load balancer ensures elasticity with auto-scaling based on demand.
+                    </p>
+                    <ul class="project-features">
+                        <li>Custom elastic load balancer for auto-scaling EC2 instances</li>
+                        <li>Asynchronous communication via AWS SQS between instances</li>
+                        <li>Edge computing with Raspberry Pi integration</li>
+                        <li>S3 storage for processed images and results</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>AWS EC2</span>
+                        <span>AWS S3</span>
+                        <span>AWS SQS</span>
+                        <span>Raspberry Pi</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 11H5v2h14v-2zm0-7H5v2h14V4zm0 14H5v2h14v-2z"/>
+                            </svg>
+                            Academic Project
+                        </span>
+                    </div>
+                </div>
+
+                <!-- GCP Study Group Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Cloud Platform</span>
+                    </div>
+                    <h3>GCP Study Group Finder</h3>
+                    <p class="project-description">
+                        Full-stack web application helping students create virtual study rooms with chat sessions,
+                        discussion forums, and authentication. Deployed on Google Cloud Platform.
+                    </p>
+                    <ul class="project-features">
+                        <li>Real-time chat and discussion forums</li>
+                        <li>Google Firebase authentication integration</li>
+                        <li>Deployed on Google App Engine with Cloud SQL</li>
+                        <li>Automated media storage to Google Cloud Storage</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>GCP App Engine</span>
+                        <span>Cloud SQL</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 11H5v2h14v-2zm0-7H5v2h14V4zm0 14H5v2h14v-2z"/>
+                            </svg>
+                            Academic Project
+                        </span>
+                    </div>
+                </div>
+
+                <!-- ASL Gesture Recognition -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">Mobile + ML</span>
+                    </div>
+                    <h3>Gesture Recognition for ASL</h3>
+                    <p class="project-description">
+                        Android mobile application for learning and classifying American Sign Language gestures.
+                        RESTful service captures human key points from video and returns gesture labels.
+                    </p>
+                    <ul class="project-features">
+                        <li>Android app for gesture learning and replication</li>
+                        <li>RESTful API hosted on AWS for gesture classification</li>
+                        <li>Human key point detection from video</li>
+                        <li>Apache HTTP Server integration</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Android</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>AWS EC2</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 11H5v2h14v-2zm0-7H5v2h14V4zm0 14H5v2h14v-2z"/>
+                            </svg>
+                            Academic Project
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Intent Classification NLP -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <span class="project-badge">NLP/ML</span>
+                    </div>
+                    <h3>Intent Classification for Chatbots</h3>
+                    <p class="project-description">
+                        Task-oriented dialog system for chatbot intent classification and out-of-scope prediction.
+                        Evaluated BERT, DialogFlow, MLP, CNN, SVM with various word embeddings.
+                    </p>
+                    <ul class="project-features">
+                        <li>Multi-model evaluation (BERT, MLP, CNN, SVM, Bi-GRU)</li>
+                        <li>Word embeddings: ELMo, GloVe, USE</li>
+                        <li>Out-of-scope query detection</li>
+                        <li>Performance benchmarking across architectures</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>BERT</span>
+                        <span>TensorFlow</span>
+                        <span>DialogFlow</span>
+                        <span>NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="link-disabled">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 11H5v2h14v-2zm0-7H5v2h14V4zm0 14H5v2h14v-2z"/>
+                            </svg>
+                            Research Project
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Skills Note -->
+            <div class="projects-note" style="margin-top: 48px; text-align: center;">
+                <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.6;">
+                    <strong style="color: var(--accent-primary);">Problem Solving:</strong> Active on competitive programming platforms
+                    with consistent practice in algorithms and data structures. Regular contributor to coding challenge repositories
+                    including LeetCode, NeetCode, and algorithm implementation exercises.
+                </p>
+                <a href="https://github.com/chaitu2568?tab=repositories" target="_blank" rel="noopener noreferrer"
+                   style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--accent-primary); text-decoration: none; font-weight: 600;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Explore More Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                        AI & Agentic Systems
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">MCP Protocol</span>
+                        <span class="skill-tag">LangGraph.js</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Multi-Agent Systems</span>
+                        <span class="skill-tag">LLM Workflows</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                        Backend Development
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                        Frameworks & Platforms
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring WebFlux</span>
+                        <span class="skill-tag">Ktor</span>
+                        <span class="skill-tag">Gin</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">ASP.NET</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                        Cloud & Infrastructure
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">AWS (EKS, Lambda, S3)</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Helm</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CloudFormation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                        Data & Messaging
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">SQS/SNS</span>
+                        <span class="skill-tag">Kafka</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Observability & DevOps
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Dynatrace</span>
+                        <span class="skill-tag">Kibana/ELK</span>
+                        <span class="skill-tag">PagerDuty</span>
+                        <span class="skill-tag">New Relic</span>
+                        <span class="skill-tag">OpenTelemetry</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p class="lead">
+                        Interested in collaboration, discussing AI-augmented engineering, or exploring distributed
+                        systems challenges? Let's connect!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:kbogaval@asu.edu" class="contact-method">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <div>
+                                <h4>Email</h4>
+                                <p>kbogaval@asu.edu</p>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/krishna-bogavalli-linkedin" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>Connect with me</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/chaitu2568" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>Check out my code</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Krishna Chaitanya Bogavalli. Built with passion and code.</p>
+            <div class="footer-links">
+                <a href="https://github.com/chaitu2568" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/krishna-bogavalli-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:kbogaval@asu.edu">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
