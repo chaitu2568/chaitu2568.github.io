@@ -50,7 +50,7 @@ const phrases = [
     'AI-Augmented Engineering',
     'Distributed Systems Architect',
     'Cloud-Native Developer',
-    'MCP Protocol Expert'
+    'MCP & Agentic Workflows'
 ];
 
 let phraseIndex = 0;
