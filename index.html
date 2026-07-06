@@ -156,8 +156,10 @@
                             <span class="timeline-date">Apr 2026 – Present</span>
                         </div>
                         <p class="timeline-description">
-                            Full pivot to AI-augmented engineering — building internal MCP tooling, agentic workflows,
-                            and AI skill libraries the team depends on to ship, monitor, and maintain production systems at pace.
+                            Full pivot to AI-augmented engineering — building internal MCP tooling, agentic
+                            workflows, and AI skill libraries the team depends on to ship, monitor, and
+                            maintain a highly regulated corporate travel booking platform at pace, where
+                            production incidents are traveler-visible and downtime has direct business impact.
                         </p>
                         <ul class="timeline-highlights">
                             <li>Originated and built an internal MCP server automating production health reviews — correlating Dynatrace metrics, Kibana logs, PagerDuty incidents, and K8s telemetry, cutting on-call review time from hours to minutes</li>
@@ -191,17 +193,20 @@
                             <span class="timeline-date">Apr 2024 – Mar 2026</span>
                         </div>
                         <p class="timeline-description">
-                            Stepped into design ownership — architecting key capabilities of the business travel product
-                            and optimizing latency-critical paths across distributed systems.
+                            Stepped into design ownership — architecting key capabilities of the business travel
+                            product and optimizing latency-critical paths across distributed systems that power
+                            end-to-end booking workflows (search → price → book) for corporate travelers,
+                            integrating with airline content via IATA <strong>NDC</strong> (New Distribution Capability)
+                            and legacy distribution channels alike.
                         </p>
                         <ul class="timeline-highlights">
-                            <li>Developed and delivered Kotlin/Ktor rules-evaluation service on Drools powering one of the key capabilities of the business travel product</li>
-                            <li>Built Spring WebFlux reactive orchestration microservices with Flux/Mono, non-blocking WebClient, backpressure handling, timeout and retry strategies</li>
-                            <li>Integrated Java virtual threads (Project Loom) cutting latency on hot paths</li>
-                            <li>Designed Redis-backed caching layer de-duplicating upstream requests across regions</li>
-                            <li>Led integrations with multiple major external content providers — schema modeling, request/response orchestration, per-provider error isolation</li>
-                            <li>Built JMeter load/stress-test harness and infra-monitoring dashboards covering pod count, CPU/memory, HPA/autoscaling</li>
-                            <li>Mentored engineers on reactive Kotlin, JVM concurrency, and API design</li>
+                            <li>Developed and delivered a Kotlin/Ktor <strong>policy engine</strong> (rules-evaluation service on Drools) powering one of the key capabilities of the business travel product — evaluating corporate travel policies against every user query in real time</li>
+                            <li>Built Spring WebFlux reactive orchestration microservices with Flux/Mono, non-blocking WebClient, backpressure handling, timeout and retry strategies — squeezing sub-second latency out of fan-out to multiple downstream content providers on every user query</li>
+                            <li>Integrated Java virtual threads (Project Loom) cutting p99 latency on hot booking-orchestration paths where every 100ms directly impacts traveler experience</li>
+                            <li>Designed a Redis-backed caching layer de-duplicating upstream requests across regions — cutting outbound API cost and load on rate-limited external providers while preserving freshness for time-sensitive fare data</li>
+                            <li>Led integrations with multiple major external content providers (NDC-based direct connects and traditional aggregators) — schema modeling, request/response orchestration across the full shop→price→book lifecycle, per-provider error isolation so a single-provider outage never cascades into a full booking failure</li>
+                            <li>Built JMeter load/stress-test harness modeling realistic booking-query concurrency and infra-monitoring dashboards covering pod count, CPU/memory, HPA/autoscaling behavior across US/EU/APJ regions</li>
+                            <li>Mentored engineers on reactive Kotlin, JVM concurrency, and distributed-systems API design</li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-tag">Kotlin</span>
@@ -211,6 +216,7 @@
                             <span class="tech-tag">Virtual Threads</span>
                             <span class="tech-tag">Redis</span>
                             <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">IATA NDC</span>
                             <span class="tech-tag">Dynatrace</span>
                         </div>
                     </div>
@@ -228,16 +234,19 @@
                             <span class="timeline-date">Dec 2021 – Mar 2024</span>
                         </div>
                         <p class="timeline-description">
-                            Builder phase — architected and delivered Go microservices from scratch, replacing legacy monolith
-                            components with cloud-native distributed systems.
+                            Builder phase — architected and delivered Go microservices from scratch, replacing
+                            legacy monolith components with cloud-native distributed systems powering
+                            corporate travel booking workflows for a globally-distributed enterprise user base
+                            where <strong>five-nines availability</strong> and sub-second query latency are hard
+                            product requirements.
                         </p>
                         <ul class="timeline-highlights">
-                            <li>Built cloud-native Go microservices (Gin framework) from the ground up as part of multi-year monolith re-platforming</li>
-                            <li>Architected partner-integration adapter layer normalizing external provider APIs for consistency</li>
-                            <li>Leveraged Go concurrency primitives (goroutines, channels, context) for high-throughput request handling</li>
-                            <li>Deployed on AWS EKS with Helm, Envoy sidecars, Vault-agent for secrets, across US/EU/APJ regions</li>
-                            <li>Built CI/CD pipelines and integrated OpenTelemetry, New Relic, Dynatrace, ELK for observability</li>
-                            <li>Implemented TDD with Godog BDD and Newman-in-Lambda scheduled sanity testing framework</li>
+                            <li>Built cloud-native Go microservices (Gin framework) from the ground up as part of a multi-year monolith-to-microservice re-platforming of a mission-critical corporate travel booking platform</li>
+                            <li>Architected the partner-integration adapter layer normalizing external provider APIs (IATA <strong>NDC</strong> direct-connects and legacy distribution channels) into a consistent internal schema — insulating downstream services from provider heterogeneity and versioning churn</li>
+                            <li>Leveraged Go concurrency primitives (goroutines, channels, context) for high-throughput request handling on fan-out queries where a single user search triggers dozens of concurrent upstream calls</li>
+                            <li>Deployed on AWS EKS with Helm, Envoy sidecars, Vault-agent for secrets — active-active across US/EU/APJ regions to serve corporate travelers wherever they are without cross-region round-trips</li>
+                            <li>Built CI/CD pipelines and integrated OpenTelemetry, New Relic, Dynatrace, and ELK for distributed tracing across every hop of the booking-transaction workflow</li>
+                            <li>Implemented TDD with Godog BDD and a Newman-in-Lambda scheduled sanity-testing framework probing production booking flows continuously so regressions surface before travelers do</li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-tag">Go</span>
@@ -246,6 +255,7 @@
                             <span class="tech-tag">Lambda</span>
                             <span class="tech-tag">Helm</span>
                             <span class="tech-tag">Envoy</span>
+                            <span class="tech-tag">IATA NDC</span>
                             <span class="tech-tag">OpenTelemetry</span>
                             <span class="tech-tag">Vault</span>
                         </div>
