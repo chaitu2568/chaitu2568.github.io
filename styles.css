@@ -380,7 +380,7 @@ body {
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 72px;
     align-items: center;
 }
@@ -522,11 +522,11 @@ body {
 
 .photo-frame {
     position: relative;
-    padding: 6px;
+    padding: 5px;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    border-radius: 28px;
+    border-radius: 22px;
     box-shadow: var(--shadow-xl);
-    max-width: 360px;
+    max-width: 240px;
     width: 100%;
     transition: transform 0.4s ease;
 }
@@ -549,7 +549,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 22px;
+    border-radius: 17px;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center 20%;
@@ -1040,7 +1040,7 @@ body {
     }
 
     .photo-frame {
-        max-width: 260px;
+        max-width: 200px;
     }
 
     .arc-item {
