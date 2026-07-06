@@ -103,13 +103,20 @@
                         regulated business travel platform at pace.
                     </p>
                     <p>
-                        Over 5+ years across SAP Concur, Microchip Technology, and earlier roles — grown
-                        from building cloud-native microservices during a multi-year monolith-to-microservice
-                        re-platforming to owning design decisions and latency-critical optimizations across
-                        mission-critical distributed systems serving corporate travelers worldwide. Along
-                        the way I've architected core capabilities of the business travel product, led
-                        integrations with major external partners, and mentored engineers on reactive systems
-                        and distributed-systems design.
+                        Over 5+ years spanning three companies — starting as a full-stack engineer at
+                        <strong>Nipun Net Solutions</strong> (2018) building real-time inventory dashboards and
+                        driving five-nines availability, then joining <strong>Microchip Technology</strong> (2021)
+                        to streamline enterprise credit-card order flows and EDI pipelines, and — since Dec 2021
+                        — growing through three levels at <strong>SAP Concur</strong>. I've moved from building
+                        cloud-native Go microservices during a multi-year monolith-to-microservice re-platforming,
+                        to owning Kotlin/Ktor and Spring WebFlux design decisions and latency-critical
+                        optimizations across mission-critical distributed systems serving corporate travelers
+                        worldwide. Along the way I've architected core capabilities of the business travel
+                        product, led integrations with major external partners, mentored engineers on reactive
+                        systems and distributed-systems design, and — most recently — pivoted to AI-augmented
+                        engineering: originating internal MCP tooling, LangGraph.js multi-agent workflows, and
+                        a growing library of Claude-based AI skills the team relies on daily to ship, monitor,
+                        and maintain a highly regulated production platform at pace.
                     </p>
                     <p>
                         Most drawn to problems where production software engineering meets applied AI —
@@ -334,21 +341,32 @@
                     </div>
                     <h3>MCP Production Health Monitor</h3>
                     <p class="project-description">
-                        Production health monitoring system automating service reviews across multiple environments.
-                        Multi-agent TypeScript system with LangGraph.js orchestrating parallel telemetry collection,
-                        intelligent triage, and automated report generation.
+                        Originated and built an internal Model Context Protocol (MCP) server that automates
+                        production service-health reviews across US/EU/APJ regions — replacing what used to
+                        be a multi-hour weekly manual ritual with a structured, auditable report generated
+                        in minutes. Authored as a full TypeScript multi-agent system on LangGraph.js, with
+                        a StateGraph-driven supervisor orchestrating parallel collector, triage, and
+                        report-writer agents. Hybrid rendering keeps numbers deterministic (extracted
+                        directly from raw telemetry) and prose LLM-polished, with fingerprint-based
+                        P1/P2/P3 triage and anti-hallucination guardrails baked into every stage.
                     </p>
                     <ul class="project-features">
-                        <li>Correlates Dynatrace metrics, Kibana logs, PagerDuty incidents, K8s telemetry</li>
-                        <li>StateGraph supervisor with collector/triage/report-writer agents</li>
-                        <li>Fingerprint-based P1/P2/P3 triage with anti-hallucination guardrails</li>
-                        <li>Cut on-call review time from hours to minutes</li>
+                        <li>Correlates Dynatrace metrics, Kibana error logs, PagerDuty incidents, and Kubernetes telemetry into a single actionable report</li>
+                        <li>StateGraph supervisor coordinates collector / triage / report-writer agents with structured hand-offs and typed intermediate state</li>
+                        <li>Fingerprint-based P1/P2/P3 classification catches recurring incidents; hybrid deterministic + LLM rendering eliminates hallucinated numbers</li>
+                        <li>Extended with infrastructure observability — pod counts, CPU/memory, HPA/autoscaling analysis surfaced inside the AI workflow</li>
+                        <li>Cut on-call review time from hours to minutes; template for safe agentic AI in a highly regulated production domain</li>
+                        <li>Composes with a broader library of 25+ reusable AI skills the team uses daily (escalation triage, log search, incident investigation, PR review, vuln tracking)</li>
                     </ul>
                     <div class="project-tech">
                         <span>TypeScript</span>
                         <span>LangGraph.js</span>
-                        <span>Claude API</span>
+                        <span>Claude AI</span>
                         <span>MCP</span>
+                        <span>Node.js</span>
+                        <span>Kubernetes</span>
+                        <span>Dynatrace</span>
+                        <span>Kibana</span>
                     </div>
                     <div class="project-links">
                         <span class="link-disabled">
@@ -747,7 +765,7 @@
                             <line x1="9" y1="9" x2="9.01" y2="9"/>
                             <line x1="15" y1="9" x2="15.01" y2="9"/>
                         </svg>
-                        AI & Agentic Systems
+                        AI, ML & Agentic Systems
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Claude AI</span>
@@ -756,6 +774,11 @@
                         <span class="skill-tag">Prompt Engineering</span>
                         <span class="skill-tag">Multi-Agent Systems</span>
                         <span class="skill-tag">LLM Workflows</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">BERT</span>
+                        <span class="skill-tag">ELMo / GloVe / USE</span>
+                        <span class="skill-tag">DialogFlow</span>
                     </div>
                 </div>
 
@@ -765,15 +788,20 @@
                             <polyline points="16 18 22 12 16 6"/>
                             <polyline points="8 6 2 12 8 18"/>
                         </svg>
-                        Backend Development
+                        Programming Languages
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Kotlin</span>
                         <span class="skill-tag">Go</span>
                         <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">C#</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
                     </div>
                 </div>
 
@@ -784,15 +812,40 @@
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        Frameworks & Platforms
+                        Backend Frameworks
                     </h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
                         <span class="skill-tag">Spring WebFlux</span>
+                        <span class="skill-tag">Spring MVC</span>
                         <span class="skill-tag">Ktor</span>
-                        <span class="skill-tag">Gin</span>
+                        <span class="skill-tag">Gin (Go)</span>
                         <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">ASP.NET MVC</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <path d="M9 9h6M9 13h6M9 17h4"/>
+                        </svg>
+                        Frontend
+                    </h3>
+                    <div class="skill-tags">
                         <span class="skill-tag">React</span>
-                        <span class="skill-tag">ASP.NET</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">D3.js</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Progressive Web Apps</span>
                     </div>
                 </div>
 
@@ -809,12 +862,21 @@
                         Cloud & Infrastructure
                     </h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">AWS EC2 / EKS / Lambda</span>
+                        <span class="skill-tag">AWS S3 / SQS / SNS</span>
+                        <span class="skill-tag">AWS CloudFormation</span>
+                        <span class="skill-tag">AWS CloudWatch</span>
+                        <span class="skill-tag">AWS Parameter Store</span>
+                        <span class="skill-tag">GCP App Engine</span>
+                        <span class="skill-tag">GCP Cloud SQL / Storage</span>
+                        <span class="skill-tag">Firebase</span>
                         <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">AWS (EKS, Lambda, S3)</span>
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Helm</span>
                         <span class="skill-tag">Terraform</span>
-                        <span class="skill-tag">CloudFormation</span>
+                        <span class="skill-tag">Envoy</span>
+                        <span class="skill-tag">Vault</span>
+                        <span class="skill-tag">Tailscale</span>
                     </div>
                 </div>
 
@@ -825,15 +887,20 @@
                             <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
                             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                         </svg>
-                        Data & Messaging
+                        Databases & Messaging
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Redis</span>
                         <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">SQL Server</span>
                         <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Reactive Redis</span>
                         <span class="skill-tag">DynamoDB</span>
-                        <span class="skill-tag">SQS/SNS</span>
+                        <span class="skill-tag">SQLite</span>
                         <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">SQS / SNS</span>
                     </div>
                 </div>
 
@@ -843,15 +910,104 @@
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12 6 12 12 16 14"/>
                         </svg>
-                        Observability & DevOps
+                        Observability & Monitoring
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Dynatrace</span>
-                        <span class="skill-tag">Kibana/ELK</span>
-                        <span class="skill-tag">PagerDuty</span>
+                        <span class="skill-tag">Kibana / ELK</span>
                         <span class="skill-tag">New Relic</span>
                         <span class="skill-tag">OpenTelemetry</span>
-                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">PagerDuty</span>
+                        <span class="skill-tag">CloudWatch</span>
+                        <span class="skill-tag">Tableau</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v6m0 4v10M2 12h6m4 0h10"/>
+                            <circle cx="12" cy="10" r="2"/>
+                        </svg>
+                        Architecture & Concurrency
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Reactive Programming</span>
+                        <span class="skill-tag">Event-Driven Systems</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Kotlin Coroutines</span>
+                        <span class="skill-tag">Go Goroutines / Channels</span>
+                        <span class="skill-tag">Java Virtual Threads (Loom)</span>
+                        <span class="skill-tag">WebFlux (Mono / Flux)</span>
+                        <span class="skill-tag">Drools Rules Engine</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                        Testing & Quality
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JUnit</span>
+                        <span class="skill-tag">Kotest</span>
+                        <span class="skill-tag">Hoverfly</span>
+                        <span class="skill-tag">Godog (Go BDD)</span>
+                        <span class="skill-tag">Newman / Postman</span>
+                        <span class="skill-tag">JMeter</span>
+                        <span class="skill-tag">TDD</span>
+                        <span class="skill-tag">Load / Stress Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="6" r="3"/>
+                            <circle cx="6" cy="12" r="3"/>
+                            <circle cx="18" cy="18" r="3"/>
+                            <line x1="8.59" y1="10.51" x2="15.42" y2="7.49"/>
+                            <line x1="8.59" y1="13.49" x2="15.42" y2="16.51"/>
+                        </svg>
+                        DevOps & Version Control
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Bitbucket</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">Maven</span>
+                        <span class="skill-tag">Gradle</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/>
+                            <line x1="18" y1="9" x2="12" y2="15"/>
+                            <line x1="12" y1="9" x2="18" y2="15"/>
+                        </svg>
+                        IDEs & Developer Tools
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">IntelliJ IDEA</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">GoLand</span>
+                        <span class="skill-tag">PyCharm</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Postman / Bruno</span>
+                        <span class="skill-tag">Docker Desktop</span>
+                        <span class="skill-tag">Terminal / Zsh</span>
+                        <span class="skill-tag">Claude Code</span>
                     </div>
                 </div>
             </div>
